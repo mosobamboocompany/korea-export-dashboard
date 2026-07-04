@@ -157,6 +157,19 @@
       border-color: #84cc16;
       color: #64748b;
     }
+    .ad-house {
+      padding: 0;
+      border: none;
+      background: transparent;
+      min-height: 0;
+      overflow: hidden;
+    }
+    .ad-house img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
     main {
       max-width: 1480px;
       margin: 0 auto;
@@ -670,9 +683,8 @@
         <div class="legend"><span><i class="l1"></i>수출액</span><span><i class="l2"></i>12M MA</span></div>
       </div>
       <div class="industry-list">
-    <a class="ad-infeed" data-ad-slot="main-top" href="mailto:mosobamboo_company@naver.com">
-      <b>AD</b>
-      <span>이 지면에 배너 광고를 게재할 수 있습니다 · 문의: mosobamboo_company@naver.com</span>
+    <a class="ad-infeed ad-house" data-ad-slot="main-top" href="https://blog.naver.com/bambooinvesting" target="_blank" rel="noopener">
+      <img src="https://mosobamboocompany.github.io/korea-export-dashboard/ebook-banner.jpg" alt="모소밤부 전자책 '세상에 질문을 던져라' — 정답은 점점 싸지고, 질문은 점점 비싸진다 · COMING SOON 2026" loading="lazy">
     </a>
     <article class="industry-row">
       <div class="industry-meta">
@@ -1176,9 +1188,8 @@
       </div>
     
     </article>
-    <a class="ad-infeed" data-ad-slot="main-mid" href="mailto:mosobamboo_company@naver.com">
-      <b>AD</b>
-      <span>이 지면에 배너 광고를 게재할 수 있습니다 · 문의: mosobamboo_company@naver.com</span>
+    <a class="ad-infeed ad-house" data-ad-slot="main-mid" href="https://blog.naver.com/bambooinvesting" target="_blank" rel="noopener">
+      <img src="https://mosobamboocompany.github.io/korea-export-dashboard/ebook-banner.jpg" alt="모소밤부 전자책 '세상에 질문을 던져라' — 정답은 점점 싸지고, 질문은 점점 비싸진다 · COMING SOON 2026" loading="lazy">
     </a>
     
 
@@ -2276,15 +2287,4 @@
         const io = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
             const slot = entry.target.dataset.adSlot;
-            if (entry.intersectionRatio >= 0.5 && !seen.has(slot)) {
-              seen.add(slot);
-              send("ad_impression", slot);
-            }
-          });
-        }, { threshold: [0.5] });
-        slots.forEach((el) => io.observe(el));
-      }
-    })();
-  </script>
-</body>
-</html>
+            if (entry.inte
